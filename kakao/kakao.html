@@ -178,11 +178,11 @@ function goBack() {
   document.getElementById('background').style.backgroundImage = "url('" + previousImage + "')";
   document.getElementById('backButton').style.display = 'none'; // Hide back button
   document.querySelector('.newButton2').style.display = 'none';
+  document.querySelector('.newButton1').style.display = 'block';
   document.querySelector('.button1').style.display = 'block';
   document.querySelector('.button2').style.display = 'block';
   document.querySelector('.button3').style.display = 'block';
   document.querySelector('.button4').style.display = 'block';
-  document.querySelector('.newButton1').style.display = 'block';
   document.querySelector('.goToIndexButton').style.display = 'block'; // index.html로 돌아가는 버튼 다시 표시
   // 배경색을 초기화합니다.
   const buttons = document.querySelectorAll('.button');
