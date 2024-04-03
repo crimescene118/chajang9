@@ -78,7 +78,7 @@
   .button1 { top: calc(552 / 2532 * 100%); }
   .button2 { top: calc(769 / 2532 * 100%); }
   .button3 { top: calc(963 / 2532 * 100%); }
-  
+}
     .Newbutton {
     width: calc(100 / 1170 * 100%);
     height: calc(100 / 2532 * 100%);
@@ -95,7 +95,6 @@
     top: calc(86 / 2532 * 100%);
     left: calc(25 / 1170 * 100%);
   }
-}
   
   @keyframes fadeInAnimation {
     from { opacity: 0; }
@@ -109,8 +108,8 @@
   <button class="button button1" id="button1" onclick="changeImage('차장구카톡1.png', 'button1')"></button>
   <button class="button button2" id="button2" onclick="changeImage('차장구카톡2.png', 'button2')"></button>
   <button class="button button3" id="button3" onclick="changeImage('차장구카톡3.png', 'button3')"></button>
- <button  class="Newbutton Newbutton1" id="Newbutton1" onclick="changeNewImage('차장구오픈채팅.png', 'button4')"></button>
-  <button class="Newbutton Newbutton2" id="Newbutton2" onclick="goBack()"></button>
+  <button class="Newbutton1" id="Newbutton1" onclick="changeNewImage('차장구오픈채팅.png', 'Newbutton1')"></button>
+  <button class="Newbutton2" id="Newbutton2" onclick="goBack()"></button>
   <button class="backButton" id="backButton" onclick="goBack()"></button>
   <button class="goToIndexButton" onclick="goToIndex()">←</button>
 </div>
