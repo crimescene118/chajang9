@@ -21,7 +21,7 @@
     background-size: cover;
     background-position: center;
   }
-  .button, .backButton, .Newbutton {
+  .button, .backButton, .newButton {
     position: absolute;
     background-color: transparent; /* 투명한 배경 */
     border: none; /* 테두리 없음 */
@@ -35,13 +35,19 @@
   .button1 { top: calc(552 / 2532 * 100%); left: 0%; }
   .button2 { top: calc(769 / 2532 * 100%); left: 0%; }
   .button3 { top: calc(963 / 2532 * 100%); left: 0%; }
-
-  .Newbutton {
+  
+  .newButton1 {
     width: calc(100 / 1170 * 100%);
     height: calc(100 / 2532 * 100%);
-  }  
-  .Newbutton1 { top: calc(2317 / 2532 * 100%); left: calc(535 / 1170 * 100%); }
-  .Newbutton2 { top: calc(2317 / 2532 * 100%); left: calc(319 / 1170 * 100%); }
+    top: calc(2317 / 2532 * 100%); 
+    left: calc(535 / 1170 * 100%);
+  }
+  .newButton2 { 
+    width: calc(100 / 1170 * 100%);
+    height: calc(100 / 2532 * 100%);
+    top: calc(2317 / 2532 * 100%); 
+    left: calc(319 / 1170 * 100%); 
+  }
   
   .backButton {
     width: calc(50 / 1170 * 100%);
@@ -79,12 +85,18 @@
   .button2 { top: calc(769 / 2532 * 100%); }
   .button3 { top: calc(963 / 2532 * 100%); }
 }
-    .Newbutton {
+    .newButton1, .newButton2 {
     width: calc(100 / 1170 * 100%);
     height: calc(100 / 2532 * 100%);
   }  
-  .Newbutton1 { top: calc(2317 / 2532 * 100%); left: calc(535 / 1170 * 100%); }
-  .Newbutton2 { top: calc(2317 / 2532 * 100%); left: calc(319 / 1170 * 100%); }
+  .newButton1 {
+    top: calc(2317 / 2532 * 100%); 
+    left: calc(535 / 1170 * 100%); 
+  }
+  .newButton2 { 
+    top: calc(2317 / 2532 * 100%); 
+    left: calc(319 / 1170 * 100%);
+  }
     .backButton {
       width: calc(50 / 768 * 100%);
       height: calc(50 / 768 * 100%);
@@ -108,8 +120,8 @@
   <button class="button button1" id="button1" onclick="changeImage('차장구카톡1.png', 'button1')"></button>
   <button class="button button2" id="button2" onclick="changeImage('차장구카톡2.png', 'button2')"></button>
   <button class="button button3" id="button3" onclick="changeImage('차장구카톡3.png', 'button3')"></button>
-  <button class="Newbutton1" id="Newbutton1" onclick="changeNewImage('차장구오픈채팅.png', 'Newbutton1')"></button>
-  <button class="Newbutton2" id="Newbutton2" onclick="goBack()"></button>
+  <button class="newButton newButton1" id="newButton1" onclick="changeNewImage('차장구오픈채팅.png', 'Newbutton1')"></button>
+  <button class="newButton newButton2" id="newButton2" onclick="goBack()"></button>
   <button class="backButton" id="backButton" onclick="goBack()"></button>
   <button class="goToIndexButton" onclick="goToIndex()">←</button>
 </div>
@@ -123,8 +135,8 @@ function changeImage(newImage, buttonId) {
   document.querySelector('.button1').style.display = 'none';
   document.querySelector('.button2').style.display = 'none';
   document.querySelector('.button3').style.display = 'none';
-  document.querySelector('.Newbutton1').style.display = 'none';
-  document.querySelector('.Newbutton2').style.display = 'none';
+  document.querySelector('.newButton1').style.display = 'none';
+  document.querySelector('.newButton2').style.display = 'none';
   document.querySelector('.goToIndexButton').style.display = 'none'; // index.html로 돌아가는 버튼 숨김
  
   // 모든 버튼의 배경색을 초기화합니다.
@@ -142,11 +154,11 @@ function changeImage(newImage, buttonId) {
 
 function changeNewImage(newImage, buttonId) {
   document.getElementById('background').style.backgroundImage = "url('" + newImage + "')";
-  document.querySelector('.Newbutton2').style.display = 'block';
+  document.querySelector('.newButton2').style.display = 'block';
   document.querySelector('.button1').style.display = 'none';
   document.querySelector('.button2').style.display = 'none';
   document.querySelector('.button3').style.display = 'none';
-  document.querySelector('.Newbutton1').style.display = 'none';
+  document.querySelector('.newButton1').style.display = 'none';
  
   // 모든 버튼의 배경색을 초기화합니다.
   const buttons = document.querySelectorAll('.button');
@@ -165,12 +177,12 @@ function goBack() {
   console.log("goBack 함수 호출됨"); // 디버깅 메시지 출력
   document.getElementById('background').style.backgroundImage = "url('" + previousImage + "')";
   document.getElementById('backButton').style.display = 'none'; // Hide back button
-  document.querySelector('.Newbutton2').style.display = 'none';
+  document.querySelector('.newButton2').style.display = 'none';
   document.querySelector('.button1').style.display = 'block';
   document.querySelector('.button2').style.display = 'block';
   document.querySelector('.button3').style.display = 'block';
   document.querySelector('.button4').style.display = 'block';
-  document.querySelector('.Newbutton1').style.display = 'block';
+  document.querySelector('.newButton1').style.display = 'block';
   document.querySelector('.goToIndexButton').style.display = 'block'; // index.html로 돌아가는 버튼 다시 표시
   // 배경색을 초기화합니다.
   const buttons = document.querySelectorAll('.button');
